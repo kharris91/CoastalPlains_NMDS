@@ -1,0 +1,11 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+```{r}
+# CPL_5 is species cover data for CPL estuarine sites that only includes species that occured on 5% (16) or more of the plots.
+cpl5 <- read.csv("CPL_5.csv")
+cpl5 <- cpl5[,-c(1:2)]
+```
+
