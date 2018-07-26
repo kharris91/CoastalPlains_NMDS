@@ -183,8 +183,73 @@ cpl5 &lt;- cpl5[,-c(1:2)]</code></pre>
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlicmFyeShcInZlZ2FuXCIpXG4jIFRyeWluZyB0byBnZXQgY29udmVyZ2VuY2Ugd2l0aCBOTURTXG5jcGw1Lm9yZCA8LSBtZXRhTURTKGNwbDUsIHRyeW1heCA9IDEwMDApXG5gYGAifQ== -->
+<pre class="r"><code>library(&quot;vegan&quot;)
+# Trying to get convergence with NMDS
+cpl5.ord &lt;- metaMDS(cpl5, trymax = 1000)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiU3F1YXJlIHJvb3QgdHJhbnNmb3JtYXRpb25cbldpc2NvbnNpbiBkb3VibGUgc3RhbmRhcmRpemF0aW9uXG5SdW4gMCBzdHJlc3MgMC4xNjMzODk0IFxuUnVuIDEgc3RyZXNzIDAuMTcxMTg3OSBcblJ1biAyIHN0cmVzcyAwLjE2OTc0OTkgXG5SdW4gMyBzdHJlc3MgMC4xNjgyNTAzIFxuUnVuIDQgc3RyZXNzIDAuMTY5NjkgXG5SdW4gNSBzdHJlc3MgMC4xNjY4NDE2IFxuUnVuIDYgc3RyZXNzIDAuMTY0ODIzIFxuUnVuIDcgc3RyZXNzIDAuMTczNDY3NSBcblJ1biA4IHN0cmVzcyAwLjE2MDU4NjMgXG4uLi4gTmV3IGJlc3Qgc29sdXRpb25cbi4uLiBQcm9jcnVzdGVzOiBybXNlIDAuMDIxNDQ0NjYgIG1heCByZXNpZCAwLjEwNDcwNzMgXG5SdW4gOSBzdHJlc3MgMC4xNjY2NDE2IFxuUnVuIDEwIHN0cmVzcyAwLjE2NzA2OTggXG5SdW4gMTEgc3RyZXNzIDAuMTY2ODczNiBcblJ1biAxMiBzdHJlc3MgMC4xNzY0NTMyIFxuUnVuIDEzIHN0cmVzcyAwLjE3MTA0ODQgXG5SdW4gMTQgc3RyZXNzIDAuMTU4MDgwMSBcbi4uLiBOZXcgYmVzdCBzb2x1dGlvblxuLi4uIFByb2NydXN0ZXM6IHJtc2UgMC4wMDc0OTAzNDkgIG1heCByZXNpZCAwLjExMjA5OCBcblJ1biAxNSBzdHJlc3MgMC4xNTgxODY1IFxuLi4uIFByb2NydXN0ZXM6IHJtc2UgMC4wMDUzMzA4NDYgIG1heCByZXNpZCAwLjA2NDgxNzM4IFxuUnVuIDE2IHN0cmVzcyAwLjE1ODA3OTIgXG4uLi4gTmV3IGJlc3Qgc29sdXRpb25cbi4uLiBQcm9jcnVzdGVzOiBybXNlIDAuMDAwNTExOTY5MiAgbWF4IHJlc2lkIDAuMDA0NzI4MDEyIFxuLi4uIFNpbWlsYXIgdG8gcHJldmlvdXMgYmVzdFxuUnVuIDE3IHN0cmVzcyAwLjE2NjkwNzMgXG5SdW4gMTggc3RyZXNzIDAuMTY1MzA0OCBcblJ1biAxOSBzdHJlc3MgMC4xNjAwMTg5IFxuUnVuIDIwIHN0cmVzcyAwLjE2NDg1ODcgXG4qKiogU29sdXRpb24gcmVhY2hlZFxuIn0= -->
+<pre><code>Square root transformation
+Wisconsin double standardization
+Run 0 stress 0.1633894 
+Run 1 stress 0.1711879 
+Run 2 stress 0.1697499 
+Run 3 stress 0.1682503 
+Run 4 stress 0.16969 
+Run 5 stress 0.1668416 
+Run 6 stress 0.164823 
+Run 7 stress 0.1734675 
+Run 8 stress 0.1605863 
+... New best solution
+... Procrustes: rmse 0.02144466  max resid 0.1047073 
+Run 9 stress 0.1666416 
+Run 10 stress 0.1670698 
+Run 11 stress 0.1668736 
+Run 12 stress 0.1764532 
+Run 13 stress 0.1710484 
+Run 14 stress 0.1580801 
+... New best solution
+... Procrustes: rmse 0.007490349  max resid 0.112098 
+Run 15 stress 0.1581865 
+... Procrustes: rmse 0.005330846  max resid 0.06481738 
+Run 16 stress 0.1580792 
+... New best solution
+... Procrustes: rmse 0.0005119692  max resid 0.004728012 
+... Similar to previous best
+Run 17 stress 0.1669073 
+Run 18 stress 0.1653048 
+Run 19 stress 0.1600189 
+Run 20 stress 0.1648587 
+*** Solution reached</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuY3BsNS5vcmRcbmBgYCJ9 -->
+<pre class="r"><code>cpl5.ord</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiXG5DYWxsOlxubWV0YU1EUyhjb21tID0gY3BsNSwgdHJ5bWF4ID0gMTAwMCkgXG5cbmdsb2JhbCBNdWx0aWRpbWVuc2lvbmFsIFNjYWxpbmcgdXNpbmcgbW9ub01EU1xuXG5EYXRhOiAgICAgd2lzY29uc2luKHNxcnQoY3BsNSkpIFxuRGlzdGFuY2U6IGJyYXkgXG5cbkRpbWVuc2lvbnM6IDIgXG5TdHJlc3M6ICAgICAwLjE1ODA3OTIgXG5TdHJlc3MgdHlwZSAxLCB3ZWFrIHRpZXNcblR3byBjb252ZXJnZW50IHNvbHV0aW9ucyBmb3VuZCBhZnRlciAyMCB0cmllc1xuU2NhbGluZzogY2VudHJpbmcsIFBDIHJvdGF0aW9uLCBoYWxmY2hhbmdlIHNjYWxpbmcgXG5TcGVjaWVzOiBleHBhbmRlZCBzY29yZXMgYmFzZWQgb24g4oCYd2lzY29uc2luKHNxcnQoY3BsNSkp4oCZIFxuIn0= -->
+<pre><code>
+Call:
+metaMDS(comm = cpl5, trymax = 1000) 
 
-<div id="rmd-source-code">LS0tDQp0aXRsZTogIlIgTm90ZWJvb2siDQpvdXRwdXQ6IGh0bWxfbm90ZWJvb2sNCi0tLQ0KDQpgYGB7cn0NCiMgQ1BMXzUgaXMgc3BlY2llcyBjb3ZlciBkYXRhIGZvciBDUEwgZXN0dWFyaW5lIHNpdGVzIHRoYXQgb25seSBpbmNsdWRlcyBzcGVjaWVzIHRoYXQgb2NjdXJlZCBvbiA1JSAoMTYpIG9yIG1vcmUgb2YgdGhlIHBsb3RzLg0KY3BsNSA8LSByZWFkLmNzdigiQ1BMXzUuY3N2IikNCmNwbDUgPC0gY3BsNVssLWMoMToyKV0NCmBgYA0KDQo=</div>
+global Multidimensional Scaling using monoMDS
+
+Data:     wisconsin(sqrt(cpl5)) 
+Distance: bray 
+
+Dimensions: 2 
+Stress:     0.1580792 
+Stress type 1, weak ties
+Two convergent solutions found after 20 tries
+Scaling: centring, PC rotation, halfchange scaling 
+Species: expanded scores based on ‘wisconsin(sqrt(cpl5))’ </code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+
+<div id="rmd-source-code">LS0tDQp0aXRsZTogIlIgTm90ZWJvb2siDQpvdXRwdXQ6IGh0bWxfbm90ZWJvb2sNCi0tLQ0KDQpgYGB7cn0NCiMgQ1BMXzUgaXMgc3BlY2llcyBjb3ZlciBkYXRhIGZvciBDUEwgZXN0dWFyaW5lIHNpdGVzIHRoYXQgb25seSBpbmNsdWRlcyBzcGVjaWVzIHRoYXQgb2NjdXJlZCBvbiA1JSAoMTYpIG9yIG1vcmUgb2YgdGhlIHBsb3RzLg0KY3BsNSA8LSByZWFkLmNzdigiQ1BMXzUuY3N2IikNCmNwbDUgPC0gY3BsNVssLWMoMToyKV0NCmBgYA0KDQpgYGB7cn0NCmxpYnJhcnkoInZlZ2FuIikNCiMgVHJ5aW5nIHRvIGdldCBjb252ZXJnZW5jZSB3aXRoIE5NRFMNCmNwbDUub3JkIDwtIG1ldGFNRFMoY3BsNSwgdHJ5bWF4ID0gMTAwMCkNCmBgYA0KYGBge3J9DQpjcGw1Lm9yZA0KYGBgDQoNCg==</div>
 
 
 

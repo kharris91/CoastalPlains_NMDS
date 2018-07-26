@@ -9,3 +9,12 @@ cpl5 <- read.csv("CPL_5.csv")
 cpl5 <- cpl5[,-c(1:2)]
 ```
 
+```{r}
+library("vegan")
+# Trying to get convergence with NMDS
+cpl5.ord <- metaMDS(cpl5, trymax = 1000)
+```
+```{r}
+cpl5.ord
+```
+
