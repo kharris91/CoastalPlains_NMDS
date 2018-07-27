@@ -3,7 +3,7 @@ library("vegan")
 
 ## CPL_5 is species cover data for CPL estuarine sites that only includes 
 ## species that occured on 5% (16) or more of the plots.
-cpl5 <- read.csv("CPL_5.csv")
+cpl5 <- read.csv("New_CPL_5.csv")
 
 # First two columns are UID and wetland class, must be removed before running NMDS 
 cpl5 <- cpl5[,-c(1:2)]
@@ -42,3 +42,33 @@ ordirgl(cpl5.ord.3d, scaling = 3, display = "sites")
 orglpoints(cpl5.ord.3d, display = "sites", choices = 1:3, col = "red")
 orgltext(cpl5.ord.3d, display = "species", choices = 1:3, adj = 0.5,
          col = "black")
+
+## Load environmental file
+ord <- cpl5.ord
+env <- read.csv("CPL5_env.csv")
+attach(env)
+variable <- STRESS_HARD
+plot(ord, disp="sites", type="n")
+ordihull(ord, variable, col=1:4, lwd=3)
+ordiellipse(ord, variable, col=1:4, kind = "ehull", lwd=3)
+ordiellipse(ord, variable, col=1:4, draw="polygon")
+ordispider(ord, variable, col=1:4, label = TRUE)
+#points(ord, disp="sites", pch=21, col="red", bg="yellow", cex=1.3)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
