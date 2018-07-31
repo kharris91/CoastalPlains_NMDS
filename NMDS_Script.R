@@ -55,20 +55,10 @@ ordiellipse(ord, variable, col=1:4, draw="polygon")
 ordispider(ord, variable, col=1:4, label = TRUE)
 #points(ord, disp="sites", pch=21, col="red", bg="yellow", cex=1.3)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+## CCA
+cca <- cca(cpl5 ~ PH+  VMMI + P_T + XRCOV_AC + RFREQ_AC, na = na.omit, subset = TRUE, scale = TRUE,  data=env)
+cca
+plot(cca)
 
 
 
